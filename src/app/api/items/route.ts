@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 export const items = [
     {price: 1.59, items: ["Apple Fritter", "Boston Cream", "Chocolate Dip", "Honey Dip"], type: "Dnt"},
     {price: 2.29, items: ["Chocolate Chip", "Blueberry", "Raisin Bran", "Fruit Explosion"], type: "Muf"},
@@ -20,5 +22,5 @@ export const items = [
 ]
 
 export async function GET() {
-    return Response.json(items);
+    return NextResponse.json(items);
 }
