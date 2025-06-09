@@ -11,7 +11,7 @@ export default function Beverages() {
         
     useEffect(()=>{
         setSubScreen("Hot Beverages")
-    }, []);
+    });
 
         return (<div className="flex justify-between">
             

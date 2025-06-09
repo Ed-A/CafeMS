@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Donuts from "./Donuts";
 import Muffins from "./Muffins";
 import Cookies from "./Cookies";
@@ -13,7 +13,7 @@ export default function Sides() {
     
     useEffect(()=>{
         setSubScreen("Donuts")
-    }, []);
+    });
 
     return (<div className="flex justify-between">
 

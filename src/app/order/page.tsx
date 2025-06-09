@@ -22,7 +22,7 @@ export default function Order() {
     useEffect(()=>{
         setIndex(orders.length-1);
         orders.map((order)=>{setTotal((prev)=> prev + (order.price * order.quantity));})
-    },[orders.length]);
+    },[orders.length, orders]);
 
     const handleClass = (index: number, itemIndex: number) => {
 
@@ -59,7 +59,7 @@ export default function Order() {
                     Void Item
             </button>
             <button className="bg-yellow-100 w-auto h-min" 
-                    onClick={()=>{orders.length>=1 && setOrders([...orders, orders[itemIndex]])}}>
+                    onClick={()=>{if(orders.length>=1) setOrders([...orders, orders[itemIndex]])}}>
                         Repeat Item
             </button>
             <button className="bg-yellow-100 w-[45%] h-min"
