@@ -9,7 +9,7 @@ const {drink} = useOrder();
 
 const handleClick = async () => {
 
-    const res = await axios.get('http://localhost:3000/items');
+    const res = await axios.get('https://cafe-ms-git-main-ed-as-projects.vercel.app/api/items');
     const data = res.data;
     console.log(data);
     const result = data.find((el:{price: number, items: string[], type: string}) => 

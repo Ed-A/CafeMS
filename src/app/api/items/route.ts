@@ -17,8 +17,6 @@ export const items = [
     {price: 2.79, items: ["Frozen Lemonade"], type: "Small"},
     {price: 3.29, items: ["Frozen Lemonade"], type: "Medium"},
     {price: 3.79, items: ["Frozen Lemonade"], type: "Large"},
-    
-    
 ]
 
 export async function GET() {
